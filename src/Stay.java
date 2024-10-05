@@ -1,20 +1,20 @@
 public class Stay {             //pobyt
 
-    private boolean workStay;// pracovní pobyt
+    private boolean isWorkStay;// pracovní pobyt
 
-    public boolean isWorkStay() {
-        return workStay;
+    public boolean getIsWorkStay() {
+        return isWorkStay;
     }
 
-    public void setWorkStay(boolean workStay) {
-        this.workStay = workStay;
+    public void setWorkStay(boolean isWorkStay) {
+        this.isWorkStay = isWorkStay;
     }
 
 
     //konstruktor
 
-    public Stay(boolean workStay){
-        this.workStay = workStay;
+    public Stay(boolean isWorkStay){
+        this.isWorkStay = isWorkStay;
     }
 
 
