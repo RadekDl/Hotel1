@@ -5,17 +5,11 @@ public class Main {
 
         Customer customer1 = new Customer("Adéla ","Malíková ",LocalDate.of(
                 1993,3,13));
-
         Customer customer2 = new Customer("Jan ", "Dvořáček ", LocalDate.of(
                 1995,5,5));
 
         customer2.setBirthday(LocalDate.of(1995,4,5));
-
         System.out.println(customer2.getBirthday());  // kontrola přepsání datumu
-
-
-
-
 
         Room room1 = new Room(1,1,true,
                 true,1000);
@@ -25,12 +19,8 @@ public class Main {
                 true,2400);
 
 
-
-
         Booking booking1 = new Booking(LocalDate.of(2024,12,18),
                                         LocalDate.of(2025,1,5));
-
-
 
 
         System.out.println(customer1.getFirstName()+" "+ customer1.getSecondName()+ " "+
