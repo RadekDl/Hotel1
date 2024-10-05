@@ -38,6 +38,8 @@ public class Main {
         Booking booking2 = new Booking (LocalDate.of(2021,9,1),
                                          LocalDate.of(2021,9,14),customer1,customer2,
                                             customer2,room3);
+
+
         System.out.println("Rezervace pokoje číslo "+room1.getRoomOfNumber()+" je "+ "od "
                             +booking1.getReservationOn()+" do "+booking1.getReservationOff()+" klientem "
                                 + booking1.getCustomer().getFirstName()+" "+ booking1.getCustomer().getSecondName());

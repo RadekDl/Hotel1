@@ -4,7 +4,7 @@ public class Booking {              //rezervace
 
     private LocalDate reservationOn;	//datum rezervace od
     private LocalDate reservationOff; 	//datum rezervace do
-    private Customer customer;
+    private Customer customer;          //3 zákazníci kvůli konstruktoru
     private Customer customer2;
     private Customer customer3;
     private Room room;
