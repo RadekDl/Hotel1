@@ -6,7 +6,7 @@ public class Stay {             //pobyt
         return isWorkStay;
     }
 
-    public void setWorkStay(boolean isWorkStay) {
+    public void setIsWorkStay(boolean isWorkStay) {
         this.isWorkStay = isWorkStay;
     }
 

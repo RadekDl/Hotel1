@@ -1,4 +1,7 @@
+import java.awt.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,16 +21,22 @@ public class Main {
         Room room3 = new Room(3, 3, false,
                 true,2400);
 
+        Stay isWorkStay1 = new Stay(true);
+        Stay isWorkStay2 = new Stay(false);
 
 
-        System.out.println(customer1.getFirstName()+" "+ customer1.getSecondName()+ " "+
+        System.out.println("\n"+customer1.getFirstName()+" "+ customer1.getSecondName()+ " "+
                             customer1.getBirthday());
-        System.out.println("Pokoj číslo "+room1.getRoomOfNumber()+ " a pokoj číslo "+
+        System.out.println("\n"+ customer2.getFirstName()+" "+ customer2.getSecondName()+ " "+
+                            customer2.getBirthday());
+
+
+        System.out.println("\nPokoj číslo "+room1.getRoomOfNumber()+ " a pokoj číslo "+
                             room2.getRoomOfNumber()+ " jsou "+ room1.getNumberOfBeds()+ " lůžkové "+
                             " za cenu "+ room1.getPrice()+"Kč/noc." +"\n Další vybavení: balkón: "+
                             room1.getIsBalcon()+","+" Výhled na moře: "+room1.getIsSeaView()+".");
-        System.out.println("Pokoj číslo "+room3.getNumberOfBeds()+" je "+ room1.getNumberOfBeds()+"lůžkový"+
-                            " za cenu "+ room3.getPrice()+"Kč/noc."+" Další vybavení: balkón: "+ room3.getIsBalcon()+
+        System.out.println("\nPokoj číslo "+room3.getNumberOfBeds()+" je "+ room1.getNumberOfBeds()+"lůžkový"+
+                            " za cenu "+ room3.getPrice()+"Kč/noc."+"\n Další vybavení: balkón: "+ room3.getIsBalcon()+
                             " Výhled na moře: "+ room3.getIsSeaView());
 
         Booking booking1 = new Booking(LocalDate.of(2021,7,1),
@@ -40,15 +49,33 @@ public class Main {
                                             customer2,room3);
 
 
-        System.out.println("Rezervace pokoje číslo "+room1.getRoomOfNumber()+" je "+ "od "
+
+        System.out.println("\n Rezervace pokoje číslo "+room1.getRoomOfNumber()+" je "+ "od "
                             +booking1.getReservationOn()+" do "+booking1.getReservationOff()+" klientem "
-                                + booking1.getCustomer().getFirstName()+" "+ booking1.getCustomer().getSecondName());
+                                + booking1.getCustomer().getFirstName()+" "+ booking1.getCustomer().getSecondName()
+                                +" pracovní pobyt "+ isWorkStay1.getIsWorkStay()+"\n");
+
         System.out.println("Rezervace pokoje číslo "+room3.getRoomOfNumber()+" je "+ "od "
                 +booking2.getReservationOn()+" do "+booking2.getReservationOff()+" klientem "
                 + booking2.getCustomer().getFirstName()+" "+ booking2.getCustomer().getSecondName()
-                +" "+booking2.getCustomer2().getFirstName()+ " a "+booking2.getCustomer2().getSecondName());                    ;
+                +" "+booking2.getCustomer2().getFirstName()+ " a "+booking2.getCustomer2().getSecondName()
+                +" pracovní pobyt "+ isWorkStay2.getIsWorkStay());                    ;
 
 
+       List<Booking> bookings = new ArrayList<>();
+       bookings.add(booking1);
+       bookings.add(booking2);
+
+
+
+        for (Booking reservation : bookings ) {
+            System.out.println("\nzačátek rezervace "+ reservation.getReservationOn());
+            System.out.println("konec rezervace "+ reservation.getReservationOff());
+            System.out.println("pokoj číslo "+ reservation.getRoom().getRoomOfNumber()+"\n");
+            System.out.println(reservation.getCustomer().getSecondName());
+            System.out.println(reservation.getCustomer2().getSecondName());
+            System.out.println(reservation.getCustomer3().getSecondName());
+        }
 
     }
 }

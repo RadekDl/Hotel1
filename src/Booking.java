@@ -29,11 +29,11 @@ public class Booking {              //rezervace
     }
 
     public Customer getCustomer() {
-        return customer;
+        return customer1;
     }
 
     public void setCustomer(Customer customer) {
-        this.customer = customer;
+        this.customer1 = customer;
     }
 
     public Customer getCustomer2() {
@@ -61,14 +61,14 @@ public class Booking {              //rezervace
     }
 
 
-// konstruktor
+    // konstruktor
 
 
     public Booking(LocalDate reservationOn, LocalDate reservationOff,
                    Customer customer,Customer customer2,Customer customer3, Room room) {
         this.reservationOn = reservationOn;
         this.reservationOff = reservationOff;
-        this.customer = customer;
+        this.customer1 = customer;
         this.customer2 = customer2;
         this.customer3 = customer3;
         this.room = room;
