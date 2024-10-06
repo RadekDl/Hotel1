@@ -74,9 +74,7 @@ public class Main {
 
         }
 
-        for (Booking reservation : bookings) {
-            System.out.println("\n"+reservation.getCustomer1());
-        }
+
 
     }
 }

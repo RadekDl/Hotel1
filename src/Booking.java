@@ -12,6 +12,8 @@ public class Booking {              //rezervace
 
     // metody
 
+
+
     public LocalDate getReservationOn() {
         return reservationOn;
     }
@@ -59,7 +61,6 @@ public class Booking {              //rezervace
     public void setRoom(Room room) {
         this.room = room;
     }
-
 
     // konstruktor
 
