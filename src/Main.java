@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,12 +51,12 @@ public class Main {
 
         System.out.println("\n Rezervace pokoje číslo "+room1.getRoomOfNumber()+" je "+ "od "
                             +booking1.getReservationOn()+" do "+booking1.getReservationOff()+" klientem "
-                                + booking1.getCustomer().getFirstName()+" "+ booking1.getCustomer().getSecondName()
+                                + booking1.getCustomer1().getFirstName()+" "+ booking1.getCustomer1().getSecondName()
                                 +" pracovní pobyt "+ isWorkStay1.getIsWorkStay()+"\n");
 
         System.out.println("Rezervace pokoje číslo "+room3.getRoomOfNumber()+" je "+ "od "
                 +booking2.getReservationOn()+" do "+booking2.getReservationOff()+" klientem "
-                + booking2.getCustomer().getFirstName()+" "+ booking2.getCustomer().getSecondName()
+                + booking2.getCustomer1().getFirstName()+" "+ booking2.getCustomer1().getSecondName()
                 +" "+booking2.getCustomer2().getFirstName()+ " a "+booking2.getCustomer2().getSecondName()
                 +" pracovní pobyt "+ isWorkStay2.getIsWorkStay());                    ;
 
@@ -72,7 +71,7 @@ public class Main {
             System.out.println("\nzačátek rezervace "+ reservation.getReservationOn());
             System.out.println("konec rezervace "+ reservation.getReservationOff());
             System.out.println("pokoj číslo "+ reservation.getRoom().getRoomOfNumber()+"\n");
-            System.out.println(reservation.getCustomer().getSecondName());
+            System.out.println(reservation.getCustomer1().getSecondName());
             System.out.println(reservation.getCustomer2().getSecondName());
             System.out.println(reservation.getCustomer3().getSecondName());
         }

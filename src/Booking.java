@@ -4,7 +4,7 @@ public class Booking {              //rezervace
 
     private LocalDate reservationOn;	//datum rezervace od
     private LocalDate reservationOff; 	//datum rezervace do
-    private Customer customer;          //3 zákazníci kvůli konstruktoru
+    private Customer customer1;          //3 zákazníci kvůli konstruktoru
     private Customer customer2;
     private Customer customer3;
     private Room room;
@@ -28,12 +28,12 @@ public class Booking {              //rezervace
         this.reservationOff = reservationOff;
     }
 
-    public Customer getCustomer() {
+    public Customer getCustomer1() {
         return customer1;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer1 = customer;
+    public void setCustomer1(Customer customer1) {
+        this.customer1 = customer1;
     }
 
     public Customer getCustomer2() {
@@ -65,10 +65,10 @@ public class Booking {              //rezervace
 
 
     public Booking(LocalDate reservationOn, LocalDate reservationOff,
-                   Customer customer,Customer customer2,Customer customer3, Room room) {
+                   Customer customer1, Customer customer2, Customer customer3, Room room) {
         this.reservationOn = reservationOn;
         this.reservationOff = reservationOff;
-        this.customer1 = customer;
+        this.customer1 = customer1;
         this.customer2 = customer2;
         this.customer3 = customer3;
         this.room = room;
