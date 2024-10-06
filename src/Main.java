@@ -9,6 +9,8 @@ public class Main {
                 1993,3,13));
         Customer customer2 = new Customer("Jan ", "Dvořáček ", LocalDate.of(
                 1995,5,5));
+        Customer customer3 = new Customer("Null","Null",LocalDate.of(
+                1900,1,1));
 
         customer2.setBirthday(LocalDate.of(1995,4,5));
        // System.out.println(customer2.getBirthday());  // kontrola přepsání datumu
@@ -65,12 +67,11 @@ public class Main {
        bookings.add(booking2);
 
 
-
         for (Booking reservation : bookings ) {
             System.out.println("\nzačátek rezervace "+ reservation.getReservationOn());
             System.out.println("konec rezervace "+ reservation.getReservationOff());
             System.out.println("pokoj číslo "+ reservation.getRoom().getRoomOfNumber()+"\n");
-            System.out.println("jméno"+ reservation.getCustomer()); // nenačítá mi to customer
+            //System.out.println("jméno "+ reservation.getCustomer()); // nenačítá mi to get.customer
 
         }
 

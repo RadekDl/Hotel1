@@ -83,7 +83,7 @@ public class Booking {              //rezervace
         this.customer1 = customer1;
         this.customer2 = customer2;
         this.room = room;
-        this.customer3 = null;
+        this.customer3 = getCustomer3();
     }
 
     public Booking(LocalDate reservationOn, LocalDate reservationOff, Customer customer1, Room room) {
@@ -91,7 +91,7 @@ public class Booking {              //rezervace
         this.reservationOff = reservationOff;
         this.customer1 = customer1;
         this.room = room;
-        this.customer2 = null;
-        this.customer3 = null;
+        this.customer2 = getCustomer2();
+        this.customer3 = getCustomer3();
     }
 }
