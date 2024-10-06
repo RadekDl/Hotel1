@@ -24,7 +24,7 @@ public class Main {
         Stay isWorkStay2 = new Stay(false);
 
 
-        System.out.println("\n"+customer1.getFirstName()+" "+ customer1.getSecondName()+ " "+
+        System.out.println("\n"+ customer1.getFirstName()+" "+ customer1.getSecondName()+ " "+
                             customer1.getBirthday());
         System.out.println("\n"+ customer2.getFirstName()+" "+ customer2.getSecondName()+ " "+
                             customer2.getBirthday());
@@ -39,13 +39,12 @@ public class Main {
                             " Výhled na moře: "+ room3.getIsSeaView());
 
         Booking booking1 = new Booking(LocalDate.of(2021,7,1),
-                                        LocalDate.of(2021,7,19),customer1,customer1,
-                                            customer1,room1); // 3x customer1 protože je na pokoji jeden člověk
-                                                                // a abych nedával null
+                                        LocalDate.of(2021,7,19), customer1,room1); //
+
 
         Booking booking2 = new Booking (LocalDate.of(2021,9,1),
-                                         LocalDate.of(2021,9,14),customer1,customer2,
-                                            customer2,room3);
+                                         LocalDate.of(2021,9,14), customer1,
+                customer2,room3);
 
 
 
@@ -71,9 +70,12 @@ public class Main {
             System.out.println("\nzačátek rezervace "+ reservation.getReservationOn());
             System.out.println("konec rezervace "+ reservation.getReservationOff());
             System.out.println("pokoj číslo "+ reservation.getRoom().getRoomOfNumber()+"\n");
-            System.out.println(reservation.getCustomer1().getSecondName());
-            System.out.println(reservation.getCustomer2().getSecondName());
-            System.out.println(reservation.getCustomer3().getSecondName());
+            System.out.println("jméno"+ reservation.getCustomer()); // nenačítá mi to customer
+
+        }
+
+        for (Booking reservation : bookings) {
+            System.out.println("\n"+reservation.getCustomer1());
         }
 
     }

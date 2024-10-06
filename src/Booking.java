@@ -73,6 +73,24 @@ public class Booking {              //rezervace
         this.customer3 = customer3;
         this.room = room;
 
+    }
 
+    public Booking(LocalDate reservationOn, LocalDate reservationOff, Customer customer1,
+                   Customer customer2, Room room) {
+        this.reservationOn = reservationOn;
+        this.reservationOff = reservationOff;
+        this.customer1 = customer1;
+        this.customer2 = customer2;
+        this.room = room;
+        this.customer3 = null;
+    }
+
+    public Booking(LocalDate reservationOn, LocalDate reservationOff, Customer customer1, Room room) {
+        this.reservationOn = reservationOn;
+        this.reservationOff = reservationOff;
+        this.customer1 = customer1;
+        this.room = room;
+        this.customer2 = null;
+        this.customer3 = null;
     }
 }
